@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "leaflet": "^1.5.1",
+    "bloomer": "^0.6.5",
+    "bulma": "^0.8.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-leaflet": "^2.5.0",
