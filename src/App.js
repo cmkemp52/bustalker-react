@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BusTracker} from './components/busTracker';
+import BusTracker from './components/busTracker';
 
 function App() {
   return (
