@@ -1,22 +1,107 @@
-.App {
+/* 
+    ====================
+      Home Background
+  ======================== 
+ 
+*/
+.welcomeContainer {
+  display: flex;
+  flex-direction: row;
+  height: 80vh;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  min-height: 500px;
+}
+
+.home-background {
+  background-image: url('./assets/busStop.jpg');
+  background-repeat: no-repeat;
+  max-width: 100%;
+  max-height: 100%;
+  padding-right: 0;
+  background-position: center;
+  background-size: cover;
+}
+
+
+/* 
+    ====================
+      Home About Info 
+  ======================== 
+ 
+*/
+
+.about {
+  flex-direction: column;
+  width: 60%;
+  padding-top: 20rem;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
+  text-shadow:
+  2px 2px 1px #000;
 }
 
-.App-logo {
-  height: 40vmin;
+.about button {
+  border: 1px solid black;
+  border-radius: 100px;
+  background-color: RGB(0,138,198);
+  margin-top: 1rem;
+  width: 20%;
+  height: 2rem;
+  font-size: .9rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.about hr {
+  width: 10%; 
+  margin: auto;
+}
+
+.about a {
+  color: black
+}
+
+
+/* 
+  ====================
+      Weather Card 
+======================== 
+
+*/
+
+#weatherDiv {
+  width: 50vh;
+}
+
+#card {
+  position: relative;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: row;
+  min-width: 0;
+  word-wrap: break-word;
+  justify-content: space-around;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 2rem;
+  align-items: center;
+}
+
+#stats {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+#iconStatus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-link {
-  color: #09d3ac;
+.container--weather {
+  text-align: center;
+  align-content: start;
+  color: white;
 }
