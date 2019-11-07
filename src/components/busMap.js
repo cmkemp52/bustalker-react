@@ -21,7 +21,7 @@ class BusMap extends Component{
                 return(
                     <Marker position={[bus.LATITUDE, bus.LONGITUDE]} key={bus.VEHICLE} 
                     icon={bus.DIRECTION === "Northbound" ? nIcon : bus.DIRECTION === "Southbound" ? sIcon :
-                    bus.DIRECTION === "Eastbound" ? eIcon : bus.DIRECTION === "Westbound" ? wIcon : ""}>
+                    bus.DIRECTION === "Eastbound" ? eIcon : wIcon}>
                         <Popup>
                             {bus.ADHERENCE > 0 ?
                                 `Bus Rt: ${bus.ROUTE} Bus ID:${bus.VEHICLE} Currently ${bus.ADHERENCE} minute(s) ahead of schedule` :
