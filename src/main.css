@@ -61,7 +61,7 @@ body {
 }
 
 .home-background {
-    /* background-image: url('../images/busStop.jpg'); */
+    background-image: url('./assets/busStop.jpg');
     background-repeat: no-repeat;
     max-width: 100%;
     max-height: 100%;

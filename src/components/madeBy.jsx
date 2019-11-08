@@ -6,7 +6,7 @@ class MadeBy extends Component {
       <nav>
         <ul>
           <h1>Made by:</h1>
-          <li class="footer-item">
+          <li className="footer-item">
             <p>
               Christopher Kemp:
               <br />{" "}
@@ -14,7 +14,7 @@ class MadeBy extends Component {
               <a href="https://github.com/cmkemp52">Github</a>
             </p>
           </li>
-          <li class="footer-item">
+          <li className="footer-item">
             <p>
               Joey Fitzpatrick:
               <br />{" "}
@@ -24,7 +24,7 @@ class MadeBy extends Component {
               <a href="https://github.com/joeyf116">Github</a>
             </p>
           </li>
-          <li class="footer-item">
+          <li className="footer-item">
             <p>
               Prescott Sun:
               <br />{" "}

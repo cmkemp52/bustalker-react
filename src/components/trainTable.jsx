@@ -40,6 +40,7 @@ class TrainTable extends Component {
           Update Trains
         </Button>
         <table>
+          <tbody>
           <tr>
             <th>Station</th>
             <th>Line</th>
@@ -59,6 +60,7 @@ class TrainTable extends Component {
               </tr>
             );
           })}
+          </tbody>
         </table>
       </>
     );
