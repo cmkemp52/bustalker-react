@@ -6,9 +6,11 @@ import Tweets from './twitterEmbed';
 
 class BusTracker extends Component{
     state = {
-        busLoc: null
+        busLoc: null,
+        userLoc: null
     }
     componentDidMount(){
+        this.requestLocation();
         this.tick();
     }
     async tick(){
@@ -20,16 +22,28 @@ class BusTracker extends Component{
             setTimeout(5000);
         }
     }
+    requestLocation=()=>{
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(user=>{
+                this.setState({
+                    userLoc: [user.coords.latitude, user.coords.longitude]
+                })
+            })
+        }
+    }
 
     render(){
         return(
+            <>
             <div id="trackerPage">
-                {this.state.busLoc ? <BusMap busLoc={this.state.busLoc}/> : ""}
+                {this.state.busLoc ? <BusMap busLoc={this.state.busLoc} userLoc={this.state.userLoc}/> : ""}
                 <div id="tweets">
                     {this.state.busLoc ? <BusChart busLoc={this.state.busLoc}/> : ""}
                     <Tweets/>
                 </div>
             </div>
+            <div className="split1" id="split1"></div>
+            </>
         )
     }
 }

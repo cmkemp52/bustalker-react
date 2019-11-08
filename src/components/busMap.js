@@ -10,7 +10,7 @@ class BusMap extends Component{
             wIcon = Leaflet.icon({iconUrl:"images/buswest.png",iconSize:[50,50],iconAnchor:[25,25],popupAnchor:[0,-10]});
         const position = [33.75, -84.38];
         return(
-            <Map center={position} zoom={12} id="mapDiv">
+            <Map center={this.props.userLoc ? this.props.userLoc : position} zoom={this.props.userLoc ? 16 : 12} id="mapDiv" scrollWheelZoom={false} >
                 <TileLayer
                     url='https://api.tiles.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY21rZW1wNTIiLCJhIjoiY2sxN3czcWZ0MWw4aDNicWQ5ZGk3ZGRiciJ9.TmrrAvuGokXxLMhoa96krg'
                 />
@@ -29,6 +29,7 @@ class BusMap extends Component{
                     </Marker>
                 );
             })}
+            {this.props.userLoc ? <Marker position={this.props.userLoc}></Marker> : ""}
             </Map>
         )
     }
