@@ -71,6 +71,21 @@ body {
   background-size: cover;
 }
 
+#navlogo{
+    max-height: 100px;
+}
+#navbarNav{
+    display: flex;
+    justify-content: space-between;
+}
+#navLinks{
+    display: flex;
+}
+#navLinks li a{
+    font-size: 2em;
+    margin-right: 20px;
+}
+
 /* 
     ====================
       Home About Info 

@@ -42,7 +42,7 @@ class BusTracker extends Component{
                     <Tweets/>
                 </div>
             </div>
-            <div className="split1" id="split1"></div>
+            <div className="split2" id="split2"></div>
             </>
         )
     }

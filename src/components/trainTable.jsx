@@ -65,6 +65,7 @@ class TrainTable extends Component {
             </tbody>
           </table>
         </div>
+        <div className="split3" id="split3"></div>
       </>
     );
   }
