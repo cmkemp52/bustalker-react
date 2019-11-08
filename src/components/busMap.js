@@ -3,9 +3,6 @@ import { Map, TileLayer, Marker, Popup} from 'react-leaflet'
 import Leaflet from 'leaflet';
 
 class BusMap extends Component{
-    componentDidMount(){
-        console.log("props are ", this.props.busLoc);
-    }
     render(){
         const nIcon = Leaflet.icon({iconUrl:"images/busnorth.png",iconSize:[50,50],iconAnchor:[25,25],popupAnchor:[0,-10]}),
             sIcon = Leaflet.icon({iconUrl:"images/bussouth.png",iconSize:[50,50],iconAnchor:[25,25],popupAnchor:[0,-10]}),

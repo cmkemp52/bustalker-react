@@ -166,9 +166,7 @@ body {
     grid-template-rows: 40% 1fr;
 }
 #tweets {
-    display: grid;
     justify-content:center;
-    grid-template-rows: 1fr 1fr;
     margin-top:20px;
     align-content: center;
 }
@@ -177,9 +175,7 @@ body {
     margin: 2px;
     height: 85vh;
 }
-#chartContainer{
-    max-height: 40vh;
-}
+
 
 
 /* 

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {loadData} from "../utils/loadData";
 import BusMap from './busMap';
+import BusChart from './busChart';
 
 class BusTracker extends Component{
     state = {
@@ -23,6 +24,9 @@ class BusTracker extends Component{
         return(
             <div id="trackerPage">
                 {this.state.busLoc ? <BusMap busLoc={this.state.busLoc}/> : ""}
+                <div id="tweets">
+                    {this.state.busLoc ? <BusChart busLoc={this.state.busLoc}/> : ""}
+                </div>
             </div>
         )
     }
