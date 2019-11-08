@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {loadData} from "../utils/loadData";
 import BusMap from './busMap';
 import BusChart from './busChart';
+import Tweets from './twitterEmbed';
 
 class BusTracker extends Component{
     state = {
@@ -26,6 +27,7 @@ class BusTracker extends Component{
                 {this.state.busLoc ? <BusMap busLoc={this.state.busLoc}/> : ""}
                 <div id="tweets">
                     {this.state.busLoc ? <BusChart busLoc={this.state.busLoc}/> : ""}
+                    <Tweets/>
                 </div>
             </div>
         )
