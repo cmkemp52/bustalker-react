@@ -6,6 +6,7 @@ const tweets = props =>{
         <TwitterTimelineEmbed
             sourceType="profile"
             screenName="MARTASERVICE"
+            theme="dark"
             options={{height: 220}}
         />
     )
