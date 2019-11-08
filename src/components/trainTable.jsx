@@ -17,6 +17,7 @@ class TrainTable extends Component {
     const trainData = await loadData(
       `http://developer.itsmarta.com/RealtimeTrain/RestServiceNextTrain/GetRealtimeArrivals?apikey=38713de0-2f9d-4c15-a510-533e53718c3e`
     );
+    console.log(trainData);
     this.setState({
       trainData
     });
@@ -39,29 +40,31 @@ class TrainTable extends Component {
         >
           Update Trains
         </Button>
-        <table>
-          <tbody>
-          <tr>
-            <th>Station</th>
-            <th>Line</th>
-            <th>Direction</th>
-            <th>Arrival Time</th>
-            <th>Wait Time</th>
-          </tr>
-
-          {trainData.map((train, id) => {
-            return (
-              <tr key={`train-${id}`}>
-                <td>{train.STATION}</td>
-                <td>{train.LINE}</td>
-                <td>{train.DIRECTION}</td>
-                <td>{train.NEXT_ARR}</td>
-                <td>{train.WAITING_TIME}</td>
+        <div className="container--train">
+          <table>
+            <tbody>
+              <tr>
+                <th>Station</th>
+                <th>Line</th>
+                <th>Direction</th>
+                <th>Arrival Time</th>
+                <th>Wait Time</th>
               </tr>
-            );
-          })}
-          </tbody>
-        </table>
+
+              {trainData.map((train, id) => {
+                return (
+                  <tr key={`train-${id}`}>
+                    <td>{train.STATION}</td>
+                    <td>{train.LINE}</td>
+                    <td>{train.DIRECTION}</td>
+                    <td>{train.NEXT_ARR}</td>
+                    <td>{train.WAITING_TIME}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </>
     );
   }
